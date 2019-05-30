@@ -1,0 +1,20 @@
+max=5000  #finds all primes up to this number
+n = range(2,max,1)
+primes=[2]
+q=len(primes)
+i=0
+
+while i<max-2:
+    t=0
+    while t<=q:
+        if t==q:
+            primes.append(n[i])
+            q+=1
+            break
+        if n[i]%primes[t]==0:
+            break
+        else:
+            t+=1
+    i+=1
+
+print(primes)
